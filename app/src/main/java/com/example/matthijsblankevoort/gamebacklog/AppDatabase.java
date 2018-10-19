@@ -10,6 +10,11 @@ public abstract class AppDatabase extends RoomDatabase {
     public abstract GameDAO gameDAO();
     private static AppDatabase INSTANCE;
 
+    /**
+     *
+     * @param context
+     * @return AppDatabase
+     */
     public static AppDatabase getAppDatabase(Context context) {
         if (INSTANCE == null) {
             INSTANCE =

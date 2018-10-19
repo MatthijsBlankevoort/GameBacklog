@@ -24,42 +24,82 @@ public class GameEntity implements Serializable{
     @ColumnInfo(name = "status")
     private String status;
 
+    /**
+     *
+     * @return int
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     *
+     * @param id
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     *
+     * @return String
+     */
     public String getTitle() {
         return title;
     }
 
+    /**
+     *
+     * @param title
+     */
     public void setTitle(String title) {
         this.title = title;
     }
 
+    /**
+     *
+     * @return String
+     */
     public String getPlatform() {
         return platform;
     }
 
+    /**
+     *
+      * @param platform
+     */
     public void setPlatform(String platform) {
         this.platform = platform;
     }
 
+    /**
+     *
+     * @return String
+     */
     public String getNotes() {
         return notes;
     }
 
+    /**
+     *
+     * @param notes
+     */
     public void setNotes(String notes) {
         this.notes = notes;
     }
 
+    /**
+     *
+     * @return String
+     */
     public String getStatus() {
         return status;
     }
 
+    /**
+     *
+     * @param status
+     */
     public void setStatus(String status) {
         this.status = status;
     }

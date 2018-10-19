@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
     private List<GameEntity> gameList = new ArrayList<>();
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         addGameButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             *
+             * @param view
+             */
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, CreateGameActivity.class);
@@ -51,12 +59,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         ItemTouchHelper.SimpleCallback swipeDelete = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
+            /**
+             *
+             * @param recyclerView
+             * @param viewHolder
+             * @param target
+             * @return
+             */
             @Override
             public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
                 return false;
             }
 
+            /**
+             *
+             * @param viewHolder
+             * @param direction
+             */
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
                 int mPosition = (viewHolder.getAdapterPosition());

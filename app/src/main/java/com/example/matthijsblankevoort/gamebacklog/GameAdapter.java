@@ -21,11 +21,22 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.GameViewHolder
     private List<GameEntity> gameList;
     private Context context;
 
+    /**
+     *
+     * @param context
+     * @param gameList
+     */
     public GameAdapter(Context context, List<GameEntity> gameList){
         this.context = context;
         this.gameList = gameList;
     }
 
+    /**
+     *
+     * @param parent
+     * @param viewType
+     * @return
+     */
     @NonNull
     @Override
     public GameViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -33,6 +44,11 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.GameViewHolder
         return new GameViewHolder(view);
     }
 
+    /**
+     *
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(@NonNull GameViewHolder holder, final int position) {
         System.out.println(position);
@@ -41,6 +57,10 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.GameViewHolder
         holder.statusText.setText(gameList.get(position).getStatus());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
+            /**
+             *
+              * @param view
+             */
             @Override
             public void onClick(View view) {
                 context = view.getContext();
@@ -62,6 +82,10 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.GameViewHolder
         private TextView statusText;
         private TextView dateText;
 
+        /**
+         *
+          * @param gameCardView
+         */
         public GameViewHolder(View gameCardView) {
             super(gameCardView);
             titleText = itemView.findViewById(R.id.titleText);

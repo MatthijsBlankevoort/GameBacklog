@@ -24,6 +24,10 @@ public class CreateGameActivity extends AppCompatActivity {
     private Spinner statusInput;
     private GameEntity gameEntity;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +53,10 @@ public class CreateGameActivity extends AppCompatActivity {
             statusInput.setSelection(statusArrayList.indexOf(gameEntity.getStatus()));
 
             saveButton.setOnClickListener(new View.OnClickListener() {
+                /**
+                 * 
+                 * @param view
+                 */
                 @Override
                 public void onClick(View view) {
                     gameEntity.setTitle(titleInput.getEditText().getText().toString());
@@ -62,6 +70,10 @@ public class CreateGameActivity extends AppCompatActivity {
             });
         } else {
             saveButton.setOnClickListener(new View.OnClickListener() {
+                /**
+                 *
+                  * @param view
+                 */
                 @Override
                 public void onClick(View view) {
                     GameEntity gameEntity = new GameEntity();
